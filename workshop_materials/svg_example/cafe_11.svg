@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 17 17"
+   height="17"
+   width="17"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="cafe_11.svg"
+   inkscape:version="0.92.3 (unknown)">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1022"
+     id="namedview12"
+     showgrid="false"
+     inkscape:zoom="13.882353"
+     inkscape:cx="0.57627119"
+     inkscape:cy="8.3919492"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10" />
+  <title
+     id="title2">cafe-11.svg</title>
+  <rect
+     fill="none"
+     x="0"
+     y="0"
+     width="17"
+     height="17"
+     id="rect4" />
+  <path
+     fill="rgba(255,255,255,0.25)"
+     transform="translate(3 3)"
+     d="M7,9.5C7,9.7761,6.7761,10,6.5,10h-4C2.2239,10,2,9.7761,2,9.5S2.2239,9,2.5,9h4C6.7761,9,7,9.2239,7,9.5z M8,3H7V2H2v4  c0.0016,1.3807,1.1222,2.4987,2.5029,2.4971C5.4948,8.4959,6.3921,7.9085,6.79,7H8c1.1046,0,2-0.8954,2-2S9.1046,3,8,3z M8,6H7V4h1  c0.5523,0,1,0.4477,1,1S8.5523,6,8,6z"
+     style="stroke-linejoin:round;stroke-miterlimit:4px;"
+     stroke="rgba(255,255,255,0.25)"
+     stroke-width="2"
+     id="path6" />
+  <path
+     fill="#444444"
+     transform="translate(3 3)"
+     d="M7,9.5C7,9.7761,6.7761,10,6.5,10h-4C2.2239,10,2,9.7761,2,9.5S2.2239,9,2.5,9h4C6.7761,9,7,9.2239,7,9.5z M8,3H7V2H2v4  c0.0016,1.3807,1.1222,2.4987,2.5029,2.4971C5.4948,8.4959,6.3921,7.9085,6.79,7H8c1.1046,0,2-0.8954,2-2S9.1046,3,8,3z M8,6H7V4h1  c0.5523,0,1,0.4477,1,1S8.5523,6,8,6z"
+     id="path8"
+     style="fill:#c7762f;fill-opacity:1" />
+</svg>
