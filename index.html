@@ -2,527 +2,528 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Foss4gNL</title>
-    <script>
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-        document.getElementsByTagName('head')[0].appendChild(link);
-    </script>
-    <link rel="stylesheet" href="reveal_js/css/reveal.css">
-    <link rel="stylesheet" href="reveal_js/css/theme/webmapper.css">
-    <link rel="stylesheet" href="reveal_js/lib/css/zenburn.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Foss4gNL</title>
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+  <link rel="stylesheet" href="reveal_js/css/reveal.css">
+  <link rel="stylesheet" href="reveal_js/css/theme/webmapper.css">
+  <link rel="stylesheet" href="reveal_js/lib/css/zenburn.css">
 </head>
 
 <body>
-    <div class="reveal">
-        <div class="slides">
-            <!-- Intro -->
-            <section>
-                <section data-background="https://github.com/NieneB/Webmapping_for_beginners/blob/gh-pages/img/webmapper.gif?raw=true">
-                    <blockquote>
-                        <h3>De toekomst van open source web mapping</h3>
-                        <h1>Vector tiles!</h1>
-                        <h3>By Niene Boeijen</h3>
-                    </blockquote>
-                </section>
-                <section>
-                    <h2>Niene Boeijen </h2>
-                    <div style="float:left; width:50%;">
-                        <img src="https://raw.githubusercontent.com/NieneB/Webmapping_for_beginners/gh-pages/img/wur.jpg" width="250px">
-                        <a href="https://waag.org/en/users/niene-boeijen">
-                            <img src="https://raw.githubusercontent.com/NieneB/Webmapping_for_beginners/gh-pages/img//WS_logo.jpg" height="100px">
-                        </a>
-                        <a href="http://maptime.io">
-                            <img src="https://raw.githubusercontent.com/NieneB/Webmapping_for_beginners/gh-pages/img//maptimeAMS.png" height="200px">
-                        </a>
-                        <a href="http://webmapper.net">
-                            <img src="https://raw.githubusercontent.com/wiki/NieneB/Webmapping_for_beginners/img/webmapper_logo_tekst.png" height="120px"> </a>
-                    </div>
-                    <div style="float:right; width: 50%;">
-                        <p>Propaedeuse Kunstacademie</p>
-                        <p>MSc Geo Information Science</p>
-                        <p>Stage Geo Web Visualisatie</p>
-                        <p>Maptime Amsterdam & Utrecht</p>
-                        <p>Web Cartograaf</p>
-                    </div>
-                    <aside class="notes">
-                        Full Stack Web Map Developer.
-                    </aside>
-                </section>
-                <section data-background="reveal_js/img/screenshot_background.png">
-                        <a href="http://webmapper.net">
-                        <img src="https://raw.githubusercontent.com/wiki/NieneB/Webmapping_for_beginners/img/webmapper_logo_tekst.png" height="150px">
-                    </a>
-                                        <div style="background-color:rgba(255,255,255,0.8);">
-                    <blockquote>
-                        <i>
-                            <p>What the map can be</p>
-                            <p>Wij maken interactieve kaarten en datavisualisaties. Onze expertise is open {source; data; standaarden}. Onze
-                                kracht is het combineren van cartografie en webtechnologie.</p>
-                        </i>
-                    </blockquote>
-                    <p>Utrecht, The Netherlands</p>
-                    </div>
-                </section>
-                <section>
-                    <h1>Deze presentatie</h1>
-                    <ul>
-                        <li>Web maps</li>
-                        <li>van raster naar vector</li>
-                        <li>vector tiles</li>
-                        <li>voorbeelden</li>
-                    </ul>
-                </section>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Intro -->
+      <section>
+        <section data-background="https://github.com/NieneB/Webmapping_for_beginners/blob/gh-pages/img/webmapper.gif?raw=true">
+          <blockquote>
+            <h3>De toekomst van open source web mapping</h3>
+            <h1>Vector tiles!</h1>
+            <h3>By Niene Boeijen</h3>
+          </blockquote>
+        </section>
+        <section>
+          <h2>Niene Boeijen </h2>
+          <div style="float:left; width:50%;">
+            <img src="https://raw.githubusercontent.com/NieneB/Webmapping_for_beginners/gh-pages/img/wur.jpg" width="250px">
+            <a href="https://waag.org/en/users/niene-boeijen">
+              <img src="https://raw.githubusercontent.com/NieneB/Webmapping_for_beginners/gh-pages/img//WS_logo.jpg" height="100px">
+            </a>
+            <a href="http://maptime.io">
+              <img src="https://raw.githubusercontent.com/NieneB/Webmapping_for_beginners/gh-pages/img//maptimeAMS.png" height="200px">
+            </a>
+            <a href="http://webmapper.net">
+              <img src="https://raw.githubusercontent.com/wiki/NieneB/Webmapping_for_beginners/img/webmapper_logo_tekst.png" height="120px"> </a>
+            </div>
+            <div style="float:right; width: 50%;">
+              <p>Propaedeuse Kunstacademie</p>
+              <p>MSc Geo Information Science</p>
+              <p>Stage Geo Web Visualisatie</p>
+              <p>Maptime Amsterdam & Utrecht</p>
+              <p>Web Cartograaf</p>
+            </div>
+            <aside class="notes">
+              Full Stack Web Map Developer.
+            </aside>
+          </section>
+          <section data-background="reveal_js/img/screenshot_background.png">
+            <a href="http://webmapper.net">
+              <img src="https://raw.githubusercontent.com/wiki/NieneB/Webmapping_for_beginners/img/webmapper_logo_tekst.png" height="150px">
+            </a>
+            <blockquote>
+              <i>
+                <p>What the map can be</p>
+                <p>Wij maken interactieve kaarten en datavisualisaties. Onze expertise is open {source; data; standaarden}. Onze
+                  kracht is het combineren van cartografie en webtechnologie.</p>
+                </i>
+              </blockquote>
+              <p>Utrecht, The Netherlands</p>
             </section>
-            <!-- Web map -->
             <section>
+              <h1>Deze presentatie</h1>
+              <ul>
+                <li>Web maps</li>
+                <li>van raster naar vector</li>
+                <li>vector tiles</li>
+                <li>voorbeelden</li>
+              </ul>
+            </section>
+          </section>
+          <!-- Web map -->
+          <section>
             <section data-background="reveal_js/img/boston.gif">                  <blockquote> 
-                <h1>What is a web map?</h1>
+              <h1>What is a web map?</h1>
+              
+              <p>Data, tiles, styles and servers. </p>
+              <p>View in a browser, scroll, pan, zoom. </p>
+              <img src="reveal_js/img/webmapping_4_steps.jpg"/>
+            </blockquote>
+          </section>
+          <section data-background="reveal_js/img/osm.png">
+            <h2>
+              <a href="openstreetmap.org">openstreetmap.org</a>
+            </h2>
+          </section>
+          <section data-background="reveal_js/img/google.png">
+            <h2>
+              <a href="google.com/maps">google.com/maps</a>
+            </h2>
+          </section>
+          <section>
+            <h1>a little History</h1>
+            <div style="float:left; width:50%">
+              <p>Digital maps</p>
+              <p>GIS software</p>
+              <p>GIS on the Web is not user friendly.. </p>
+              <p>1996 Mapquest first with a web service! </p>
+            </div>
+            <img src="https://s.aolcdn.com/hss/storage/midas/b9b34e399643c72a62fe437ab37b7ed0/203335059/500004990-03-01.jpeg" style="float:right; width:50%">
+          </section>
+          <section>
+            <p>But really slow to load..</p>
+            <p>2004 Endoxon found a way for quick online mapping!
+              <a href="http://map.search.ch">map.search.ch</a>
+            </p>
+            <p>2005 Google Maps took over!</p>
+            <p> The solution?</p>
+            <h1 class="fragment grow">Tiles! </h1>
+          </section>
+          <section data-background="http://maptime.io/anatomy-of-a-web-map/images/tiles-loading.gif">
+            <h1>Tiles</h1>
+            <p>All tiles 256x256 pixels </p>
+            <p>Same grid, same boundaries </p>
+            <p class="fragment grow">All these little tiles load way faster than one big map!</p>
+            <p> Seamless and fast</p>
+            <p>We call those slippy maps</p>
+          </section>
+          <section>
+            <h1>Zoom levels</h1>
+            <p>Each zoom level has its own set of tiles!</p>
+            <div style="float:right; width:50%">
+              <p>Zoom level 0: 1 tile for the whole world.</p>
+              <p>Increases exponentially...</p>
+              <p>Zoom level 1: 4 tiles</p>
+              <p>Zoom level 2: 16 tiles</p>
+              <p> etc. </p>
+            </div>
+            <img src="http://www.truenorthgeospatial.com/wp-content/uploads/2015/10/training-tiling.png" style="float:left; width:50%">
+            <a href="http://www.maptiler.org/google-maps-coordinates-tile-bounds-projection/"> Map with tile bounds</a>
+          </section>
+          <section>
+            <h1>Styling & Serving tiles</h1>
+            <div style="float: left; width: 50%">
+              <p>Tiles are styled and rendered in advance</p>
+              <p>Tiles are just images on the web</p>
+              <p>
+                <a href="http://tile.openstreetmap.org/5/16/10.png">http://tile.openstreetmap.org/5/16/10.png</a>
+              </p>
+              <p>/z/x/y</p>
+            </div>
+            <div style="float: right; width: 50%">
+              <img src="http://maptime.io/anatomy-of-a-web-map/images/tiles.gif">
+            </div>
+          </section>
+          <section>
+            <img src="reveal_js/img/tile_creation.png" width="400px">
+            
+          </section>
+          <section data-background="http://mapschool.io/img/raster.png" data-background-size='60%'> </section>
+          <section>
+            <h1>Nadelen Raster tegels</h1>
+            <ul>
+              <li>
+                <p>Rendering wordt op server gedaan</p>
+              </li>
+              <li>
+                <p>Tegel set is vast-gezet: static </p>
+              </li>
+              <li>
+                <p>Veel opslag ruimte nodig!</p>
+              </li>
+              <li>
+                <p>Meerdere visualisaties = Meerdere tegel sets</p>
+              </li>
+              <li>
+                <p>Gebruiker kan niks aanpassen</p>
+              </li>
+              <li>
+                <p>Geen interactie met objecten mogelijk</p>
+              </li>
+              <li>
+                <p>Object informatie moet los opgevraagd worden in database</p>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>van Raster naar Vector</h1>
+            <img src="reveal_js/img/map-tiles-2-w800.png" />
+          </section>
+          <section data-background="http://mapschool.io/img/vector_types.png" data-background-size='60%'></section>
+          <section>
+            <h1>Vector Tile</h1>
+            <div style="float:left; width:50%;">
+              <img src="https://mapzen.com/resources/projects/vector-tiles/square-of-math.gif">
+            </div>
+            <div style="float:right; width:50%">
+              <p> Binary encoded Protocol Buffers</p>
+              <!-- 						<p> gestructureerde data, kleiner dan XML</p>
+              -->
+              <p> Alleen data! Geen stijl kleur</p>
+              <p> Zelfde tegel schema als raster tegels</p>
+              <p> 256 x 256 px</p>
+              <p> Versimpelde geometrie</p>
+            </div>
+          </section>
+          <section>
+            <img src="reveal_js/img/vector_tile_creation.png">
+          </section>
+          <section>
+            <h1>WebGL</h1>
+            <p>Rendering gebeurt in de browser</p>
+            <p>Graphics Processing Unit(GPU)</p>
+            <p>widely supported in modern browsers</p>
+            
+            <p>++ Rotating tilting</p>
+            <p>++ Smooth/inifinte zooming</p>
+          </section>
+          
+          <section>
+            <h1>Voordelen Aanbieder (Server side)</h1>
+            <ul>
+              <li>
+                <p>Gecomprimeerde data, klein en snel!</p>
+              </li>
+              <li>
+                <p>Snelle productie, minder opslag</p>
+              </li>
+              <li>
+                <p>1 tegel set in opslag</p>
+              </li>
+              <li>
+                <p>Attribuut data beschikbaar in browser, minder database request!</p>
+              </li>
+              <li>
+                <p>Rendering stijl aan client-side</p>
+              </li>
+              <li>
+                <p>Minder druk op server-side</p>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h1>Voordelen gebruiker (client side)</h1>
+            <ul>
+              <li>
+                <p>Vector = hoge resolutie, zelfs bij ver inzoomen</p>
+              </li>
+              <li>
+                <p>1 tegel set- meerder stijlen mogelijk!</p>
+              </li>
+              <li>
+                <p>Stijl kan je zelf aanpassen!</p>
+              </li>
+              <li>
+                <p>Stijlen in json of js - geen moeilijke SLD's meer nodig </p>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h1>Voorbeeld</h1>
+            <p>verelijking raster vs vector</p>
+            <a>http://pdokviewer.pdok.nl/</a>
+            <a>http://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/</a>
+          </section>
+        </section>
+        <!-- Techniek enzo -->
+        <section>
+          <section>
+            <h1>Standaarden</h1>
+            <a href="https://www.mapbox.com/vector-tiles/specification/">Mapbox Vector Tile Standard. </a>
+            <p>Based on the binary protocal buffer (.pbf) from Google.</p>
+            <p>
+              <a href="https://www.mapbox.com/blog/vector-tile-adoption/">Standard already used by Esri.</a>
+            </p>
+            <p>Web Mercator projection, Google tiling scheme.</p>
+            <h1>Bestands Formaat</h1>
+            <p>.mvt - .pbf</p>
+            <p>.mbtiles</p>
+          </section>
+          
+          <section>
+            <h1>Waar komen ze vandaan?</h1>
+            <p> Download</p>
+            <p> Online host services</p>
+            <p> Zelf maken & Zelf hosten</p>
+          </section>
+          <section>
+            <h2>Host Services</h2>
+            <ul>
+              <li>
+                <a href="https://www.mapbox.com/mapbox-studio/">Mapbox Studio </a>
+              </li>
+              <li><a href="http://blogs.esri.nl/de-topografische-basiskaart-een-vertrouwd-beeld-met-nieuwe-technologie/">ESRI</li>
+                <li>
+                  <a href="https://openmaptiles.org/">https://openmaptiles.org/</a>
+                </li>
+                <li>
+                  <a href="https://www.tilehosting.com/">tilehosting.com</a>
+                  <!-- <pre><code>https://free.tilehosting.com/data/v3.json?key=*****</code></pre> -->
+                </li>
+                <li>
+                  <a href=" https://maps.tilehosting.com/data/v3.json?key=personalkey">Maptiler</a>
+                </li>
                 
-                    <p>Data, tiles, styles and servers. </p>
-                    <p>View in a browser, scroll, pan, zoom. </p>
-                    <img src="reveal_js/img/webmapping_4_steps.jpg"/>
-</blockquote>
-                </section>
-                <section data-background="reveal_js/img/osm.png">
-                    <h2>
-                        <a href="openstreetmap.org">openstreetmap.org</a>
-                    </h2>
-                </section>
-                <section data-background="reveal_js/img/google.png">
-                    <h2>
-                        <a href="google.com/maps">google.com/maps</a>
-                    </h2>
-                </section>
-                <section>
-                    <h1>a little History</h1>
-                    <div style="float:left; width:50%">
-                        <p>Digital maps</p>
-                        <p>GIS software</p>
-                        <p>GIS on the Web is not user friendly.. </p>
-                        <p>1996 Mapquest first with a web service! </p>
-                    </div>
-                    <img src="https://s.aolcdn.com/hss/storage/midas/b9b34e399643c72a62fe437ab37b7ed0/203335059/500004990-03-01.jpeg" style="float:right; width:50%">
-                </section>
-                <section>
-                    <p>But really slow to load..</p>
-                    <p>2004 Endoxon found a way for quick online mapping!
-                        <a href="http://map.search.ch">map.search.ch</a>
-                    </p>
-                    <p>2005 Google Maps took over!</p>
-                    <p> The solution?</p>
-                    <h1 class="fragment grow">Tiles! </h1>
-                </section>
-                <section data-background="http://maptime.io/anatomy-of-a-web-map/images/tiles-loading.gif">
-                    <h1>Tiles</h1>
-                    <p>All tiles 256x256 pixels </p>
-                    <p>Same grid, same boundaries </p>
-                    <p class="fragment grow">All these little tiles load way faster than one big map!</p>
-                    <p> Seamless and fast</p>
-                    <p>We call those slippy maps</p>
-                </section>
-                <section>
-                    <h1>Zoom levels</h1>
-                    <p>Each zoom level has its own set of tiles!</p>
-                    <div style="float:right; width:50%">
-                        <p>Zoom level 0: 1 tile for the whole world.</p>
-                        <p>Increases exponentially...</p>
-                        <p>Zoom level 1: 4 tiles</p>
-                        <p>Zoom level 2: 16 tiles</p>
-                        <p> etc. </p>
-                    </div>
-                    <img src="http://www.truenorthgeospatial.com/wp-content/uploads/2015/10/training-tiling.png" style="float:left; width:50%">
-                    <a href="http://www.maptiler.org/google-maps-coordinates-tile-bounds-projection/"> Map with tile bounds</a>
-                </section>
-                <section>
-                    <h1>Styling & Serving tiles</h1>
-                    <div style="float: left; width: 50%">
-                        <p>Tiles are styled and rendered in advance</p>
-                        <p>Tiles are just images on the web</p>
-                        <p>
-                            <a href="http://tile.openstreetmap.org/5/16/10.png">http://tile.openstreetmap.org/5/16/10.png</a>
-                        </p>
-                        <p>/z/x/y</p>
-                    </div>
-                    <div style="float: right; width: 50%">
-                        <img src="http://maptime.io/anatomy-of-a-web-map/images/tiles.gif">
-                    </div>
-                </section>
-                <section>
-                    <img src="reveal_js/img/tile_creation.png" width="400px">
-
-                </section>
-                <section data-background="http://mapschool.io/img/raster.png" data-background-size='60%'> </section>
-                <section>
-                    <h1>Nadelen Raster tegels</h1>
-                    <ul>
-                        <li>
-                            <p>Rendering wordt op server gedaan</p>
-                        </li>
-                        <li>
-                            <p>Tegel set is vast-gezet: static </p>
-                        </li>
-                        <li>
-                            <p>Veel opslag ruimte nodig!</p>
-                        </li>
-                        <li>
-                            <p>Meerdere visualisaties = Meerdere tegel sets</p>
-                        </li>
-                        <li>
-                            <p>Gebruiker kan niks aanpassen</p>
-                        </li>
-                        <li>
-                            <p>Geen interactie met objecten mogelijk</p>
-                        </li>
-                        <li>
-                            <p>Object informatie moet los opgevraagd worden in database</p>
-                        </li>
-                    </ul>
-                </section>
+                <!-- <li>
+                  <a href="https://mapzen.com/documentation/">Mapzen</a>
+                  <pre><code>https://tile.mapzen.com/mapzen/vector/v1/{layers}/{z}/{x}/{y}.{format}</code></pre>
+                </li> -->
+                <li><a href="https://github.com/PDOK/vectortiles-bgt-brt">PDOK Kadaster</a>
+                  <i>beta</i>
+                </li>
+                <li> <a href="https://api.data.amsterdam.nl/api/"> Gemeente Amsterdam</a>
+                  <i>beta</i>
+                </li>
+              </ul>
             </section>
             <section>
-                <section>
-                    <h1>van Raster naar Vector</h1>
-                    <img src="reveal_js/img/map-tiles-2-w800.png" />
-                </section>
-                <section data-background="http://mapschool.io/img/vector_types.png" data-background-size='60%'></section>
-                <section>
-                    <h1>Vector Tile</h1>
-                    <div style="float:left; width:50%;">
-                        <img src="https://mapzen.com/resources/projects/vector-tiles/square-of-math.gif">
-                    </div>
-                    <div style="float:right; width:50%">
-                        <p> Binary encoded Protocol Buffers</p>
-                        <!-- 						<p> gestructureerde data, kleiner dan XML</p>
-             -->
-                        <p> Alleen data! Geen stijl kleur</p>
-                        <p> Zelfde tegel schema als raster tegels</p>
-                        <p> 256 x 256 px</p>
-                        <p> Versimpelde geometrie</p>
-                    </div>
-                </section>
-                <section>
-                    <img src="reveal_js/img/vector_tile_creation.png">
-                </section>
-                <section>
-                    <h1>WebGL</h1>
-                    <p>Rendering gebeurt in de browser</p>
-                    <p>Graphics Processing Unit(GPU)</p>
-                    <p>widely supported in modern browsers</p>
-                
-                    <p>++ Rotating tilting</p>
-                    <p>++ Smooth/inifinte zooming</p>
-                </section>
-               
-                <section>
-                    <h1>Voordelen Aanbieder (Server side)</h1>
-                    <ul>
-                        <li>
-                            <p>Gecomprimeerde data, klein en snel!</p>
-                        </li>
-                        <li>
-                            <p>Snelle productie, minder opslag</p>
-                        </li>
-                        <li>
-                            <p>1 tegel set in opslag</p>
-                        </li>
-                        <li>
-                            <p>Attribuut data beschikbaar in browser, minder database request!</p>
-                        </li>
-                        <li>
-                            <p>Rendering stijl aan client-side</p>
-                        </li>
-                        <li>
-                            <p>Minder druk op server-side</p>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <h1>Voordelen gebruiker (client side)</h1>
-                    <ul>
-                        <li>
-                            <p>Vector = hoge resolutie, zelfs bij ver inzoomen</p>
-                        </li>
-                        <li>
-                            <p>1 tegel set- meerder stijlen mogelijk!</p>
-                        </li>
-                        <li>
-                            <p>Stijl kan je zelf aanpassen!</p>
-                        </li>
-                        <li>
-                            <p>Stijlen in json of js - geen moeilijke SLD's meer nodig </p>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <h1>Voorbeeld</h1>
-                    <p>verelijking raster vs vector</p>
-                    <a>http://pdokviewer.pdok.nl/</a>
-                    <a>http://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/</a>
-                </section>
+              <h1>Zelf serveren! </h1>
+              <h2> Eigen data of OSM data</h2>
+              <div style="float:left; width:50%;">
+                <img src="http://erictheise.com/geostack-deck/images/Map-nik-cake-osm-7.png">
+              </div>
+              <div style="float:right; width:50%;">
+                <p>
+                  <a href="http://docs.geoserver.org/latest/en/user/extensions/vectortiles/tutorial.html">GeoServer extensie </a>
+                </p>
+                <p>
+                  <a href="https://openmaptiles.org/docs/host/tileserver-gl/">OpenMapTile Server (tileserverGL)</a>
+                </p>
+                <p>
+                  <a href="https://github.com/mapbox/tippecanoe">TippeCanoe</a>
+                </p>
+                <p>
+                  <a href="http://tegola.io/">Tegola </a>
+                </p>
+                <p>
+                  <a href="https://github.com/pka/t-rex">T-rex</a>
+                </p>
+                <p>
+                  <a href="http://postgis.net/docs//ST_AsMVT.html">PostGIS to MVT</a>
+                </p>
+                <p>
+                  <a href="https://github.com/mapbox/awesome-vector-tiles">More </a> command line tools</p>
+                </p>
+              </div>
             </section>
-            <!-- Techniek enzo -->
             <section>
-                <section>
-                    <h1>Standaarden</h1>
-                    <a href="https://www.mapbox.com/vector-tiles/specification/">Mapbox Vector Tile Standard. </a>
-                    <p>Based on the binary protocal buffer (.pbf) from Google.</p>
-                    <p>
-                        <a href="https://www.mapbox.com/blog/vector-tile-adoption/">Standard already used by Esri.</a>
-                    </p>
-                    <p>Web Mercator projection, Google tiling scheme.</p>
-                    <h1>Bestands Formaat</h1>
-                    <p>.mvt - .pbf</p>
-                    <p>.mbtiles</p>
-                </section>
-                
-                <section>
-                    <h1>Waar komen ze vandaan?</h1>
-                    <p> Download</p>
-                    <p> Online host services</p>
-                    <p> Zelf maken & Zelf hosten</p>
-                </section>
-                <section>
-                    <h2>Host Services</h2>
-                    <ul>
-                        <li>
-                            <a href="https://www.mapbox.com/mapbox-studio/">Mapbox Studio </a>
-                        </li>
-                        <li><a href="http://blogs.esri.nl/de-topografische-basiskaart-een-vertrouwd-beeld-met-nieuwe-technologie/">ESRI</li>
-                        <li>
-                            <a href="https://openmaptiles.org/">https://openmaptiles.org/</a>
-                        </li>
-                        <li>
-                            <a href="https://www.tilehosting.com/">tilehosting.com</a>
-                            <!-- <pre><code>https://free.tilehosting.com/data/v3.json?key=*****</code></pre> -->
-                        </li>
-                        <li>
-                            <a href=" https://maps.tilehosting.com/data/v3.json?key=personalkey">Maptiler</a>
-                        </li>
-                    
-                        <!-- <li>
-                            <a href="https://mapzen.com/documentation/">Mapzen</a>
-                            <pre><code>https://tile.mapzen.com/mapzen/vector/v1/{layers}/{z}/{x}/{y}.{format}</code></pre>
-                        </li> -->
-                        <li><a href="https://github.com/PDOK/vectortiles-bgt-brt">PDOK Kadaster</a>
-                            <i>beta</i>
-                        </li>
-                        <li> <a href="https://api.data.amsterdam.nl/api/"> Gemeente Amsterdam</a>
-                            <i>beta</i>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <h1>Zelf serveren! </h1>
-                    <h2> Eigen data of OSM data</h2>
-                    <div style="float:left; width:50%;">
-                        <img src="http://erictheise.com/geostack-deck/images/Map-nik-cake-osm-7.png">
-                    </div>
-                    <div style="float:right; width:50%;">
-                        <p>
-                            <a href="http://docs.geoserver.org/latest/en/user/extensions/vectortiles/tutorial.html">GeoServer extensie </a>
-                        </p>
-                        <p>
-                            <a href="https://openmaptiles.org/docs/host/tileserver-gl/">OpenMapTile Server (tileserverGL)</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/mapbox/tippecanoe">TippeCanoe</a>
-                        </p>
-                        <p>
-                            <a href="http://tegola.io/">Tegola </a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/pka/t-rex">T-rex</a>
-                        </p>
-                        <p>
-                            <a href="http://postgis.net/docs//ST_AsMVT.html">PostGIS to MVT</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/mapbox/awesome-vector-tiles">More </a> command line tools</p>
-                        </p>
-                    </div>
-                </section>
-                <section>
-                    <h1>Hoe te visualiseren?</h1>
-                    <p>
-                        <a href="https://www.mapbox.com/mapbox-studio/">Mapbox Studio </a>
-                    </p>
-                    <p>
-                        <a href="https://www.mapbox.com/mapbox-gl-js/api/">MapboxGL.js</a>
-                    </p>
-                    <p>
-                        <a href="http://maputnik.com/">Maputnik</a>
-                    </p>
-                    <p><a href="http://www.maptiler.com/">Maptiler</a></p>
-                    <p> <a href=" https://giswiki.hsr.ch/Vector_Tiles_Reader_QGIS_Plugin"> QGIS plugin</a></p>
-                    <p>
-                        <a href="https://openlayers.org/en/latest/examples/osm-vector-tiles.html">OpenLayers</a> --
-                        <a href="http://leafletjs.com/plugins.html#vector-tiles">Leaflet.js</a>
-                    </p>
-                </section>
+              <h1>Hoe te visualiseren?</h1>
+              <p>
+                <a href="https://www.mapbox.com/mapbox-studio/">Mapbox Studio </a>
+              </p>
+              <p>
+                <a href="https://www.mapbox.com/mapbox-gl-js/api/">MapboxGL.js</a>
+              </p>
+              <p>
+                <a href="http://maputnik.com/">Maputnik</a>
+              </p>
+              <p><a href="http://www.maptiler.com/">Maptiler</a></p>
+              <p> <a href=" https://giswiki.hsr.ch/Vector_Tiles_Reader_QGIS_Plugin"> QGIS plugin</a></p>
+              <p>
+                <a href="https://openlayers.org/en/latest/examples/osm-vector-tiles.html">OpenLayers</a> --
+                <a href="http://leafletjs.com/plugins.html#vector-tiles">Leaflet.js</a>
+              </p>
             </section>
-            <!-- Voorbeelden! -->
+          </section>
+          <!-- Voorbeelden! -->
+          <section>
             <section>
-                <section>
-                    <h1>Voorbeelden!</h1>
-                </section>
-                <section data-background="reveal_js/img/pdok_kaart.png">
-                    <h1>Kadaster PDOK</h1>
-                    <img src="reveal_js/img/PDOK-logo.png">
-                    <p>BRT + BGT</p>
-                    <p>Zoom level 0 tot 16</p>
-                    <p>1 tegel set, meerder visualisaties!</p>
-                    <p>
-                        <a href="https://github.com/PDOK/vectortiles-bgt-brt">https://github.com/PDOK/vectortiles-bgt-brt</a>
-                    </p>
-                    <p>
-                        <a href="http://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/#8/52.33/5.19">Demo</a>
-                    </p>
-                    <pre><code data-trim data-noescape>"http://geodata.nationaalgeoregister.nl/beta/topotiles/{z}/{x}/{y}.pbf"</code></pre>
-                </section>
-                <section data-background="reveal_js/img/datalab_vector_tiles.gif">
-                    <h1>Datalab Amsterdam</h1>
-                    <img src="reveal_js/img/datalab.png">
-                    <img src="reveal_js/img/webmapper_logo_tekst.png">
-                    <pre><code data-trim data-noescape>"https://t{s}.data.amsterdam.nl/wm/{z}/{x}/{y}.pbf"</code></pre>
-                    <a href="https://eduardohansson.github.io/Maptime_AMSmap/#13.59/52.3626/4.8912/-16/60">vb #1.</a>
-                </section>
-                <section data-background="reveal_js/img/webmapper.gif">
-                    <h1 style="color: white;">WebGL voor 3D effecten!</h1>
-                    <p>
-                        <a href="http://apps.webmapper.nl/gebouwen/#15/52.091/5.1222/-58.4/60"> Webmapper kaart </a>
-                    </p>
-                    <img src="reveal_js/img/webmapper_logo_tekst.png">
-                </section>
-                <section>
-                    <h1>Online voorbeelden</h1>
-                    <p>
-                        <a href=""></a>
-                    </p>
-                    <p>
-                        <a href="https://parallel.co.uk/os-openmap-cyo/#12.47/54.3741/-2.916">Zelf inkleuren</a>
-                    </p>
-                    <p>
-                        <a href="https://www.mapbox.com/cartogram/">Cartogram</p>
-                    </a>
-                </section>
-                <section>
-                    <h1>Vector Tile 3</h1>
-                    <a href="https://blog.mapbox.com/hd-vector-maps-open-standard-335a49a45210">HD vector tiles</a>
-                </section>
+              <h1>Voorbeelden!</h1>
+            </section>
+            <section data-background="reveal_js/img/pdok_kaart.png">
+              <h1>Kadaster PDOK</h1>
+              <img src="reveal_js/img/PDOK-logo.png">
+              <p>BRT + BGT</p>
+              <p>Zoom level 0 tot 16</p>
+              <p>1 tegel set, meerder visualisaties!</p>
+              <p>
+                <a href="https://github.com/PDOK/vectortiles-bgt-brt">https://github.com/PDOK/vectortiles-bgt-brt</a>
+              </p>
+              <p>
+                <a href="http://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/#8/52.33/5.19">Demo</a>
+              </p>
+              <pre><code data-trim data-noescape>"http://geodata.nationaalgeoregister.nl/beta/topotiles/{z}/{x}/{y}.pbf"</code></pre>
+            </section>
+            <section data-background="reveal_js/img/datalab_vector_tiles.gif">
+              <h1>Datalab Amsterdam</h1>
+              <img src="reveal_js/img/datalab.png">
+              <img src="reveal_js/img/webmapper_logo_tekst.png">
+              <pre><code data-trim data-noescape>"https://t{s}.data.amsterdam.nl/wm/{z}/{x}/{y}.pbf"</code></pre>
+              <a href="https://eduardohansson.github.io/Maptime_AMSmap/#13.59/52.3626/4.8912/-16/60">vb #1.</a>
+            </section>
+            <section data-background="reveal_js/img/webmapper.gif">
+              <h1 style="color: white;">WebGL voor 3D effecten!</h1>
+              <p>
+                <a href="http://apps.webmapper.nl/gebouwen/#15/52.091/5.1222/-58.4/60"> Webmapper kaart </a>
+              </p>
+              <img src="reveal_js/img/webmapper_logo_tekst.png">
+            </section>
+            <section>
+              <h1>Online voorbeelden</h1>
+              <p>
+                <a href=""></a>
+              </p>
+              <p>
+                <a href="https://parallel.co.uk/os-openmap-cyo/#12.47/54.3741/-2.916">Zelf inkleuren</a>
+              </p>
+              <p>
+                <a href="https://www.mapbox.com/cartogram/">Cartogram</p>
+                </a>
+              </section>
             </section>
             <!-- Workshop -->
             <section>
-                
-                <section>
-                    <h1>MapboxGL.js</h1>
-                    <ul>
-                        <li>
-                            <a>https://www.mapbox.com/mapbox-gl-js/api/</a>
-                        </li>
-                        <li>
-                            <a>https://www.mapbox.com/mapbox-gl-js/style-spec</a>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <img src="reveal_js/img/tiles_styles_sprites_glyphs.png">
-                </section>
-                <section>    
-                    <pre><code data-trim data-noescape> 
-mapboxgl.accessToken = 'yourowntoken';
-var map = new mapboxgl.Map({
-   container: 'map-container',
-   style: 'extra/04_mystyle.json',
-   hash: true, 
-   zoom: 11, 
-   pitch: 60, 
-   bearing: 62.4,
-   center: [ 4.8, 52.4] 
-});
-            </code></pre>
-                </section>
-                <section>
-                    <h1> JSON </h1>
-                    <p> JavaScript Object Notation</p>
-                    <img src="https://i.stack.imgur.com/7lsg8.jpg" />
-                </section>
-                
-                <section>
-                    <h1> style.json</h1>
-                    <pre><code data-trim data-noescape>
-{ 
-  "version": 8, 
-  "name": "Mijn eigen Stijl", 
-  "sprite": "url", 
-  "glyphs": "url/{fontstack}/{range}.pbf", 
-  "sources": {...}, 
-  "layers": [
-    { 
-      "id": "background", 
-      "type": "background", 
-      "paint": { "background-color":"#FFFFFF" } 
-    },
-    {...}
-  ] 
-}
-            </code></pre>
-                </section> 
-            <section>
-                <table>
-                    <tr>
-                        <td>
-                            <h4> Deze presentatie </h4>
-                        </td>
-                        <td>
-                            <a href="https://nieneb.github.io/foss4gNL_vector_tiles/">nieneb.github.io/foss4gNL_vector_tiles/ </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><h4>Workshop</h4></td>
-                        <td><a href="">github.com/nieneb/foss4gNL_vector_tiles/wiki</a>
-                         </td>
-                    </tr>
-                        <tr>
-                            <td>
-                                <h4>Workshop</h4>
-                            </td>
-                            <td>
-                                <a href="">github.com/maptime-ams/vector-tiles-workshop/wiki</a>
-                            </td>
-                        </tr>
-                </table>
-               
+              
+              <section>
+                <h1>MapboxGL.js</h1>
+                <img src="https://cdn-images-1.medium.com/max/1600/0*ok6yuDnTx4o2PSFx.png">
+                <ul>
+                  <li>
+                    <a>https://www.mapbox.com/mapbox-gl-js/api/</a>
+                  </li>
+                  <li>
+                    <a>https://www.mapbox.com/mapbox-gl-js/style-spec</a>
+                  </li>
+                </ul>
+              </section>
+              <section>
+                <img src="reveal_js/img/tiles_styles_sprites_glyphs.png">
+              </section>
+              <section>    
+                <pre><code data-trim data-noescape> 
+                  mapboxgl.accessToken = 'yourowntoken';
+                  var map = new mapboxgl.Map({
+                    container: 'map-container',
+                    style: 'style.json',
+                    hash: true, 
+                    zoom: 11, 
+                    pitch: 60, 
+                    bearing: 62.4,
+                    center: [ 4.8, 52.4] 
+                  });
+                </code></pre>
+              </section>
+              <section>
+                <h1> JSON </h1>
+                <p> JavaScript Object Notation</p>
+                <img src="https://i.stack.imgur.com/7lsg8.jpg" />
+              </section>
+              
+              <section>
+                <h1> style.json</h1>
+                <pre><code data-trim data-noescape>
+                  { 
+                    "version": 8, 
+                    "name": "Mijn eigen Stijl", 
+                    "sprite": "url", 
+                    "glyphs": "url/{fontstack}/{range}.pbf", 
+                    "sources": {...}, 
+                    "layers": [
+                    { 
+                      "id": "background", 
+                      "type": "background", 
+                      "paint": { "background-color":"#FFFFFF" } 
+                    },
+                    {...}
+                    ] 
+                  }
+                </code></pre>
+              </section> 
             </section>
             <section>
+                    <section>
+                  <h1>Vector Tile 3</h1>
+                  <a href="https://blog.mapbox.com/hd-vector-maps-open-standard-335a49a45210">HD vector tiles</a>
+              </section>
+              <section>
+                <table>
+                  <tr>
+                    <td>
+                      <h4> Deze presentatie </h4>
+                    </td>
+                    <td>
+                      <a href="https://nieneb.github.io/foss4gNL_vector_tiles/">nieneb.github.io/foss4gNL_vector_tiles/ </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><h4>Workshop</h4></td>
+                    <td><a href="">github.com/nieneb/foss4gNL_vector_tiles/wiki</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h4>Workshop</h4>
+                    </td>
+                    <td>
+                      <a href="">github.com/maptime-ams/vector-tiles-workshop/wiki</a>
+                    </td>
+                  </tr>
+                </table>
+                
+              </section>
+              <section>
                 <h1>Thank you!</h1>
                 <p>Niene Boeijen</p>
                 <p>niene@webmapper.net</p>
+              </section>
             </section>
-        </section>
+          </div>
         </div>
-    </div>
-    <script src="reveal_js/lib/js/head.min.js"></script>
-    <script src="reveal_js/js/reveal.js"></script>
-    <script>
-        // More info https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
+        <script src="reveal_js/lib/js/head.min.js"></script>
+        <script src="reveal_js/js/reveal.js"></script>
+        <script>
+          // More info https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
             history: true,
-
+            
             // More info https://github.com/hakimel/reveal.js#dependencies
             dependencies: [
-                { src: 'reveal_js/plugin/markdown/marked.js' },
-                { src: 'reveal_js/plugin/markdown/markdown.js' },
-                { src: 'reveal_js/plugin/notes/notes.js', async: true },
-                { src: 'reveal_js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+            { src: 'reveal_js/plugin/markdown/marked.js' },
+            { src: 'reveal_js/plugin/markdown/markdown.js' },
+            { src: 'reveal_js/plugin/notes/notes.js', async: true },
+            { src: 'reveal_js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
             ]
-        });
-        Reveal.configure({ pdfMaxPagesPerSlide: 1 });
-    </script>
-</body>
-
-</html>
+          });
+          Reveal.configure({ pdfMaxPagesPerSlide: 1 });
+        </script>
+      </body>
+      
+      </html>
