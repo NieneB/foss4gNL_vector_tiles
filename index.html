@@ -22,36 +22,15 @@
         <div class="slides">
             <!-- Intro -->
             <section>
-                <section>
-                    <h1>Vector tiles!</h1>
-                    <h2>By Niene Boeijen</h2>
+                <section data-background="https://github.com/NieneB/Webmapping_for_beginners/blob/gh-pages/img/webmapper.gif?raw=true">
+                    <blockquote>
+                        <h3>De toekomst van open source web mapping</h3>
+                        <h1>Vector tiles!</h1>
+                        <h3>By Niene Boeijen</h3>
+                    </blockquote>
                 </section>
                 <section>
-                    <table>
-                        <tr>
-                            <td>
-                                <h4> Presentation </h4>
-                            </td>
-                            <td>
-                                <a href="https://nieneb.github.io/foss4gNL_vector_tiles/">nieneb.github.io/foss4gNL_vector_tiles/ </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4> Workshop </h4>
-                            </td>
-                            <td>
-                                <a href="https://github.com/NieneB/foss4gNL_vector_tiles/wiki">github.com/NieneB/foss4gNL_vector_tiles/wiki</a>
-                            </td>
-                        </tr>
-                    </table>
-                    <!-- <h4> or </h4>
-                    <h4>
-                        <a  href="https://github.com/NieneB/foss4gNL_vector_tiles/">github.com/NieneB/foss4gNL_vector_tiles</a>
-                    </h4> -->
-                </section>
-                <section>
-                    <h2>About me </h2>
+                    <h2>Niene Boeijen </h2>
                     <div style="float:left; width:50%;">
                         <img src="https://raw.githubusercontent.com/NieneB/Webmapping_for_beginners/gh-pages/img/wur.jpg" width="250px">
                         <a href="https://waag.org/en/users/niene-boeijen">
@@ -74,7 +53,7 @@
                         Full Stack Web Map Developer.
                     </aside>
                 </section>
-                <section data-background="https://github.com/NieneB/Webmapping_for_beginners/blob/gh-pages/img/webmapper.gif?raw=true">
+                <section >
                         <a href="http://webmapper.net">
                         <img src="https://raw.githubusercontent.com/wiki/NieneB/Webmapping_for_beginners/img/webmapper_logo_tekst.png" height="150px">
                     </a>
@@ -90,44 +69,17 @@
                     </div>
                 </section>
                 <section>
-                    <h1>Goal of today!</h1>
-                    <p> At the end of this workshop, you will have
-                        <b>your own web page with an interactive map based on PDOK Vector Tiles!</b> Your web page will be hosted on Github, so you can
-                        <b>immediately share your progress with all your family and friends!</b>
-                    </p>
-                    <img src="https://media.giphy.com/media/6KKab1ydLq1uU/giphy.gif">
-                </section>
-                <section>
-                    <h1> Beginners</h1>
-                    <img src="https://media.giphy.com/media/AEcZfXZZNCcQU/giphy.gif" width="250px">
-                    <p>For beginners means: we assume you have a basic knowlegde of HTML, CSS and JavaScript</p>
-                </section>  
-                <section>
-                    <h1>
-                        Advanced
-                    </h1>
-                    <img src="https://media.giphy.com/media/ko7twHhomhk8E/giphy.gif" width="250px">
-                    <p> You can use Node NPM, Docker and PostGIS</p>
+                    <h1>Deze presentatie</h1>
+                    <ul>
+                        <li>Web maps</li>
+                        <li>van raster naar vector</li>
+                        <li>vector tiles</li>
+                        <li>voorbeelden</li>
+                    </ul>
                 </section>
             </section>
             <!-- Web map -->
             <section>
-                <section>
-                    <h1>Let's Start!</h1>
-                    <ul>
-                        <li>What is a Web map?</li>
-                        <li>From Raster to Vector</li>
-                        <li>Vector tiles and what they look like</li>
-                        <ul>
-                            <li>Standards</li>
-                            <li>Downloading</li>
-                            <li>Making yourself</li>
-                            <li>Hosting</li>
-                            <li>Visualizing</li>
-                        </ul>
-                        <li>The workshop</li>
-                    </ul>
-                </section>
             <section data-background="reveal_js/img/boston.gif">              <h1>What is a web map?</h1>
                 
                     <p>Data, tiles, styles and servers. </p>
@@ -310,8 +262,18 @@
                     <p>.mbtiles</p>
                 </section>
                 <section>
+                    <h1>WebGL</h1>
+                    <p>Rendering gebeurt in de browser</p>
+                    <p>Graphics Processing Unit(GPU)</p>
+                    <p>widely supported in modern browsers</p>
+
+                    <p>++ Rotating tilting</p>
+                    <p>++ Smooth/inifinte zooming</p>
+                </section>
+                <section>
                     <h1>Waar komen ze vandaan?</h1>
-                    <p> gebruik online host services</p>
+                    <p> Download</p>
+                    <p> Online host services</p>
                     <p> Zelf maken & Zelf hosten</p>
                 </section>
                 <section>
@@ -385,6 +347,7 @@
                     <p>
                         <a href="http://maputnik.com/">Maputnik</a>
                     </p>
+                    <p><a href="http://www.maptiler.com/">Maptiler</a></p>
                     <p> <a href=" https://giswiki.hsr.ch/Vector_Tiles_Reader_QGIS_Plugin"> QGIS plugin</a></p>
                     <p>
                         <a href="https://openlayers.org/en/latest/examples/osm-vector-tiles.html">OpenLayers</a> --
@@ -444,34 +407,7 @@
             </section>
             <!-- Workshop -->
             <section>
-                <section>
-                    <h1>Let's make some code!</h1>
-                    <img src="https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif">
-                </section>
-                <!-- <section>
-                    <h1>a Map is a lot! </h1>
-                    <p>Tiles for Base layer</p>
-                    <p>Data layers, polygons, lines & points</p>
-                    <p>Functionality: zoom, pan, popups, markers, routes, etc. </p>
-                    <p>Interactivity</p>
-                    <p>etc.</p>
-                    <h2 class="fragment fade-in">JavaScript Libraries! </h2>
-                </section> -->
-                <!-- <section >
-                    <h1>Making a Web Page</h1>
-                    <img src="reveal_js/img/html-css-js.png">
-                    <img class="fragment fade-in" src="reveal_js/img/html-css-js-file.png">
-                </section>
-                <section>
-                    <h1>Maps with JavaScript</h1>
-                    <img src="reveal_js/img/web_map_building_blocks.png" height=" 50%">
-                </section>
-                <section>
-                    <h1>JavaScript Library</h1>
-                    <p> Including a JavaScript library in your code is like copying and pasting someone else's code into yours. You have access
-                        to everything in that library. </p>
-                    <p> In our case, it's a bunch of cool tools to make web maps and give them familiar functionality.</p>
-                </section> -->
+                
                 <section>
                     <h1>MapboxGL.js</h1>
                     <ul>
@@ -485,38 +421,8 @@
                 </section>
                 <section>
                     <img src="reveal_js/img/tiles_styles_sprites_glyphs.png">
-                    </section>
-                <section>
-                    <h1>Beginners</h1>
-                    <ol>
-                        <li> Mapbox Studio proberen</li>
-                        <li> Basis kaart zelf ontwikkelen (tekst editor + browser)</li>
-                        <li> Eigen data toevoegen (gemeenten + aardbevingen geojson)</li>
-                        <li> Vector tile bron gebruiken </li>
-                        <li> Extrusion Interactie! </li>
-                    </ol>
                 </section>
-                <section>
-                    <h1>Advanced</h1>
-                    <ul>
-                        <li>VT servers</li>
-                        <ul>
-                            <li>Tegola</li>
-                            <li>T-rex</li>
-                            <li>OpenMapTiles Server</li>
-                        </ul>
-                        <li>custom fonts</li>
-                        <li>custom icons</li>
-                        <li>Qgis plugin</li>
-                    </ul>
-                </section>
-                <section>
-                    <h1>Wat is het eind resultaat?</h1>
-                    <p> Zelf mooi maken!</p>
-                    <img src="https://media.giphy.com/media/QIiqoufLNmWo8/giphy.gif">
-                </section>
-                <section>
-                    <p> html, css & js kennen jullie? </p>
+                <section>    
                     <pre><code data-trim data-noescape> 
 mapboxgl.accessToken = 'yourowntoken';
 var map = new mapboxgl.Map({
@@ -555,41 +461,32 @@ var map = new mapboxgl.Map({
   ] 
 }
             </code></pre>
-                </section>
-
-            </section>
-        <section>
-            <section>
-                <h1>Github?!</h1>
-                <img src="https://media.giphy.com/media/TW6M5r0ncBHcQ/giphy.gif" height="200px">
-                <p>Used for code.</p>
-                <p>Version control.</p>
-                <p>Sharing.</p>
-                <p>Documentation.</p>
-            </section>
+                </section> 
             <section>
                 <table>
                     <tr>
                         <td>
-                            <h4> Presentation </h4>
+                            <h4> Deze presentatie </h4>
                         </td>
                         <td>
                             <a href="https://nieneb.github.io/foss4gNL_vector_tiles/">nieneb.github.io/foss4gNL_vector_tiles/ </a>
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <h4> Workshop </h4>
-                        </td>
-                        <td>
-                            <a href="https://github.com/NieneB/foss4gNL_vector_tiles/wiki">github.com/NieneB/foss4gNL_vector_tiles/wiki</a>
-                        </td>
+                        <td><h4>Workshop</h4></td>
+                        <td><a href="">github.com/nieneb/foss4gNL_vector_tiles/wiki</a>
+                         </td>
                     </tr>
+                        <tr>
+                            <td>
+                                <h4>Workshop</h4>
+                            </td>
+                            <td>
+                                <a href="">github.com/maptime-ams/vector-tiles-workshop/wiki</a>
+                            </td>
+                        </tr>
                 </table>
-                <!-- <h4> or </h4>
-                <h4>
-                    <a href="https://github.com/NieneB/foss4gNL_vector_tiles/">github.com/NieneB/foss4gNL_vector_tiles</a>
-                </h4> -->
+               
             </section>
             <section>
                 <h1>Thank you!</h1>
